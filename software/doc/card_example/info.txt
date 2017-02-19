@@ -1,0 +1,80 @@
+Files on the memory card (root directory)
+========================
+
+settings.ini
+------------
+  INI-File with settings:
+
+  [SETTINGS]
+  PlayMode=                  Play mode (0=normal, 1=one-by-one)
+  AutoStart=                 Auto start file (Station item number or path to Card file)
+  IRaddr=0                   IR Address (0=TV1, 1=TV2, 5=VCR2, 6=VCR2)
+  IRkeyPower=12              IR Power key
+  IRkeyUp=32                 IR Up key
+  IRkeyDown=33               IR Down key
+  IRkeyOK=38                 IR OK/Enter key
+  IRkeyVolP=16               IR Volume + key
+  IRkeyVolM=17               IR Volume - key
+
+  Name=WEBRADIO              NetBios and UPnP Name (max 15 characters)
+  MAC=00:1E:E5:12:34:56      MAC Address
+  DHCP=1                     DHCP, if fails use below settings (0=off, 1=on)
+  IP=192.168.000.050         Device IP (xxx.xxx.xxx.xxx)
+  NetMask=255.255.255.000    Device NetMask (xxx.xxx.xxx.xxx)
+  Router=192.168.000.001     Router IP (xxx.xxx.xxx.xxx)
+  DNS=192.168.000.001        DNS IP (xxx.xxx.xxx.xxx)
+  NTP=078.046.194.189        NTP IP (xxx.xxx.xxx.xxx)
+  TimeDiff=3600              Time difference to GMT in seconds (3600 = 1h = GMT+1)
+  Summer=0                   Summer time (0=off, 1=on)
+
+  Volume=40                  Default Volume (0...100 %)
+  BassFreq=150               Bass limit frequency (20...150 Hz)
+  BassAmp=9                  Bass enhancemanent (0...15 dB)
+  TrebleFreq=15000           Treble limit freqency (1000...15000 Hz)
+  TrebleAmp=0                Treble control (-8...7 dB)
+
+  AlarmVol=70                Alarm volume
+  AlarmFile1=4               Alarm file 1 (Station item number or path to Card file)
+  AlarmFile2=1               Alarm file 2, if 1st file not working
+  AlarmFile3=/alarm.mp3      Alarm file 3, if 2nd file not working
+
+  ColorBG=255,255,255        Background color (Red,Green,Blue)
+  ColorFG=000,000,000        Foreground color (Red,Green,Blue)
+  ColorSel=255,000,000       Selection color (Red,Green,Blue)
+  ColorEdge=000,144,240      Edge color (Red,Green,Blue)
+
+
+station.pls
+-----------
+  PLS-File with radio streams:
+
+  [PLAYLIST]
+  NUMBEROFENTRIES=1
+  FILE1=Stream Address (proto://domain:port/filepathname)
+  TITLE1=Stream Name
+
+
+share.pls
+---------
+  PLS-File with network shares:
+
+  [PLAYLIST]
+  NUMBEROFENTRIES=1
+  FILE1=Share Address (proto://user:password@domain/filepathname)
+  TITLE1=Share Name
+
+
+alarm.ini
+---------
+  INI-File with alarm times:
+
+  [ALARM]
+  TIME1= 08:00:MoTuWeThFrSaSu
+  TIME2=!09:00:Tu
+  TIME3= 12:34:Mo
+
+      !     -> Alarm is off / inactive
+      -     -> Alarm: go into Standby
+  all other -> Alarm: play the Alarm file
+
+  Mo=Monday, Tu=Tuesday, We=Wednesday, Th=Thursday, Fr=Friday, Sa=Saturday, Su=Sunday

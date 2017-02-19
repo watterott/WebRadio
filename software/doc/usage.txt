@@ -1,0 +1,27 @@
+Rotary encoder
+--------------
+  Left/right   - Scroll up/down
+  Normal press - Select/Enter
+  Long press   - Back/Abort
+
+
+IR remote control
+-----------------
+  2x Power     - Standby on/off
+  Volume +/-   - Volume control and in menu scroll page up/down
+  Up/down      - Scroll up/down
+  OK           - Select/Enter
+
+
+Bootloader
+----------
+The new firmware has to be copied to the root directory of the memory card and
+named "FIRMWARE.BIN".
+Then start the loader: Hold the rotary encoder switch while power on the WebRadio.
+Now the Bootloader menu appears...
+
+
+Webinterface
+------------
+Type in your browser "http://192.168.0.50" or "http://webradio"
+to access the webinterface. (These are the default addresses.)
